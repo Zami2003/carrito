@@ -2,7 +2,7 @@
     $servidor = "localhost";
     $db = "carrito_venta";
     $usuario = "root";
-    $password = "";
+    $password = "root";
 
     $conexion = mysqli_connect($servidor, $usuario, $password, $db);
 
