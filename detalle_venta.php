@@ -55,7 +55,7 @@
 
                             <div class="form-group row ">
                                 <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
-                                <button type="submit" class="btn btn-danger">Registrar</button>
+                                <button type="submit" class="btn btn-success">Registrar</button>
 
                             </div>
 
