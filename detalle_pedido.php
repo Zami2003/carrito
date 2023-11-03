@@ -1,70 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" type="text/css">
+    <title>Clientes</title>
+    <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
+    
+    <link rel="shortcut icon" href="carrito.png">
+</head>
 
 <body>
 <?php 
-//lenguaje php
-include("include/menu.php");
-?>
+    // Lenguaje en php
+    include("include/menu.php");
 
-<!-- Inicio de contenido -->
+    ?>
+     
+     <!---INICIO DE CONTENIDO--->
 <div class="main-content">
-    <div class="page-content">
-        <div class="container-fluid">
+
+
+   <div class="page-content">
+       <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    
-                    <h4>FORMULARIO  DE VENTAS</h4>
+                    <div class="col-10">
+                    <h4>Detalles del Pedido</h4>
+                    </div>
                     <div class="card">
                         <div class="card-body">
-                          <form action="operaciones/registrar_usuario.php"method="POST">
-                          
 
-                           <div class="form-group row">
-                               <label class="col-lg-2 col-md-2 col-md-12">CANTIDAD:</label>
-                               <input type="number" name="dnitrab" placeholder="Ingrese numero de venta" class="form-control col-lg-8 col-md-10 col-sm-12 required">
-                           </div>
-                           
-                           
-                           <div class="form-group row">
-                               <label class="col-lg-2 col-md-2 col-md-12">DESCUENTOS:</label>
-                               <input type="text" name="fechana" placeholder="" class="form-control col-lg-4 col-md-4 col-sm-12 required">
-                           </div>
+                        <form action="registrar_usuarios.php" method="post">
+                       
 
 
-                           <div class="form-group row">
-                               <label class="col-lg-2 col-md-2 col-md-12">IMPORTE:</label>
-                               <input type="number" name="fechana" placeholder="" class="form-control col-lg-4 col-md-4 col-sm-12 required">
-                           </div>
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Descuentos</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
 
-                           <div class="form-group row">
-                           <label class="col-lg-3 col-md-3 col-md-12"></label>
-                               <button type="submite" class="btn btn-primary">Guardar</button>
-                           </di>
-                         </form> 
+                            </div>
 
+                                    <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for="">Importe</label>
+                                <input type="number"class="form-control col-lg-4 col-md-4 col-sm-12"  name="telefono"placeholder=" "required>
+
+                            </div>
+
+
+                            <div class="form-group row ">
+                                <label class="col-lg-2 col-md-2 col-sm-12" for=""></label>
+                                <button type="submit" class="btn btn-danger">Registrar</button>
+
+                            </div>
+
+
+                        </form>
                         </div>
+                        
                     </div>
 
+
+                    <div class="card">
+                        <div class="card-body">
+
+<!-- table -->
+                        </div>
+                        
+                    </div>
+
+
+
                 </div>
+
             </div>
+
+
         </div>
+
     </div>
+
+
 </div>
 
-<!-- Fin de contenido -->
 
 
-<!-- jQuery  -->
-<script src="plantilla/Admin/vertical/assets/js/jquery.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+     <!---FIN DE CONTENIDO-->
+    <!-- jQuery  -->
+    <script src="plantilla/Admin/vertical/assets/js/jquery.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/metismenu.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/waves.js"></script>
@@ -74,4 +104,5 @@ include("include/menu.php");
     <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
 
 </body>
+
 </html>
