@@ -6,13 +6,13 @@
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title h4" id="myLargeModalLabel">Lista de usuarios</h5>
+                                                    <h5 class="modal-title h4" id="myLargeModalLabel">Lista de Proveedores</h5>
                                                     <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    ...<form action="operaciones/registrar_proveedor.php" method="POST" enctype="multipart/form-data">
+                                                   <form action="operaciones/registrar_proveedor.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-group row">
                                         <label class="col-lg-2 col-md-2 col-sm-12" > ruc_dni: </label>
                                         <input type="number" name="ruc" class="form-control col-lg-4 col-md-4 col-sm-12" required>
