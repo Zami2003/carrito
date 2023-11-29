@@ -1,15 +1,19 @@
+<?php
+include("include/conexion.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clientes</title>
     <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<?php 
+    <?php 
     // Lenguaje en php
     include("include/menu.php");
 
@@ -21,39 +25,50 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <h4>Datos de la Empresa</h4>
-                        <div class="card">
-                            <div class="card-body">
-                                <form action="operaciones/registrar_usuario.php" method="POST">
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" > RUC: </label>
-                                        <input type="number" name="dni" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >Razon Social:</label>
-                                        <input type="text" name="ape_nom" class="form-control col-lg-10 col-md-10 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >Telefono:</label>
-                                        <input type="number" name="telefono" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >Direccion:</label>
-                                        <input type="text" name="direccion" class="form-control col-lg-10 col-md-10 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" >Correo:</label>
-                                        <input type="email" name="correo" class="form-control col-lg-10 col-md-10 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-lg-2 col-md-2 col-sm-12" > Logo: </label>
-                                        <input type="file" name="dni" class="form-control col-lg-4 col-md-4 col-sm-12" required>
-                                    </div>
-                                    <div class="form-group row">
-                                    <label class="col-lg-2 col-md-2 col-sm-12"></label>
-                                        <button type="submit" class="btn btn-success">Guardar</button>
-                                    </div>
-                                </form>
+                    <?php include("include/modal_frm_reg_clientes.php"); ?>
+
+                    <table id="basic-datatable" class="table dt-responsive nowrap">
+                                    <thead >
+                                            <th>Nro</th>
+                                            <th>ruc_dni</th>
+                                            <th>razon social</th>
+                                            <th>telefono</th>
+                                            <th>correo</th>
+                                            <th>direccion</th>
+                                            <th>direccion_envio</th>
+                                            
+                                            <th>acciones</th>
+
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                           
+                                            $consulta = "SELECT * FROM cliente";
+                                            $ejecutar = mysqli_query($conexion, $consulta);
+                                            $contador=0;
+                                           
+                                            while ($respuesta= mysqli_fetch_array($ejecutar)) {
+                                                $contador += 1;
+                                                echo "<tr>";
+                                                echo "<td>".$contador."</td>";
+                                                echo "<td>".$respuesta['ruc_dni']."</td>";
+                                                echo "<td>".$respuesta['razon_social']."</td>";
+                                                echo "<td>".$respuesta['telefono']."</td>";
+                                                echo "<td>".$respuesta['correo']."</td>";
+                                                echo "<td>".$respuesta['direccion']."</td>";
+                                                echo "<td>".$respuesta['direccion_envio']."</td>";
+                                                echo "<td><button class='btn btn-success'>Editar</button> <button class='btn btn-danger'>Eliminar</button></td>";
+  
+                                                echo "</tr>";
+                                            }
+
+                                        ?>
+                                    </tbody>
+                                </table>
+
+                        
+
+                                
                             </div>
                         </div>
                     </div>

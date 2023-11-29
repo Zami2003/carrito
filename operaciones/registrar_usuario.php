@@ -33,7 +33,6 @@ if ($ejecutar) {
     echo "error al subir la foto";
 }
 
-
 //mostrar la informacion
 
 //echo $dni."<br>";
