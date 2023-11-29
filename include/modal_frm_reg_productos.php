@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-lg-2 col-md-2 col-sm-12" >Stock:</label>
-                                        <input type="text" name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                        <input type="number" name="stock" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-lg-2 col-md-2 col-sm-12" >Estado:</label>

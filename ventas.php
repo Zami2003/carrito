@@ -43,7 +43,7 @@
                                             $contador=0;
                                            
                                             while ($respuesta= mysqli_fetch_array($ejecutar)) {
-                                                $contador += 1;
+                                                $contador ++;
                                                 echo "<tr>";
                                                 echo "<td>".$contador."</td>";
                                                 echo "<td>".$respuesta['serie_venta']."</td>";
