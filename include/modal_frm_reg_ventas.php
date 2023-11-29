@@ -1,12 +1,12 @@
 <!-- Large modal -->
-<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".registrar">+ Nuevo</button>
+<button type="button" class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target=".ventas">+ Nuevo</button>
+ <h2> lista de ventas</h2>
 
-
-<div class="modal fade registrar" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade ventas" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title h4" id="myLargeModalLabel">Lista de usuarios</h5>
+                                                    <h5 class="modal-title h4" id="myLargeModalLabel">Lista de Ventas</h5>
                                                     <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                     </button>
