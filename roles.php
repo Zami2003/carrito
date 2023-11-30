@@ -39,9 +39,9 @@ include("include/conexion.php");
                                     <tbody>
                                         <?php
                                            
-                                            $consulta = "SELECT * FROM producto";
+                                            $consulta = "SELECT * FROM roles";
                                             $ejecutar = mysqli_query($conexion, $consulta);
-                                            $contador=0;
+                                            $contador ++;
                                            
                                             while ($respuesta= mysqli_fetch_array($ejecutar)) {
                                                 $contador ++;

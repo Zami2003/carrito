@@ -16,3 +16,4 @@ if ($ejecutar) {
 }else {
     echo "Registro Fallido";
 }
+?>

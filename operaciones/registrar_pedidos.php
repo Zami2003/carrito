@@ -1,41 +1,27 @@
 <?php
 include("../include/conexion.php");
-//recibir la informacion
 
-$fecha_pedido=$_POST['fecha_pedido'];
-$fecha_entrega=$_POST['fecha_entrega'];
-
+$cliente=$_POST['id_cliente'];
+$fechaHoraVenta=$_POST['fecha_hora_pedido'];
+$echaEntrega=$_POST['fecha_entrega'];
+$metodoPago=$_POST['metodo_pago'];
 $monto=$_POST['monto'];
 $comprobante=$_POST['comprobante'];
 $estado=$_POST['estado'];
 
 
 
+$consulta="INSERT INTO pedidos (id_cliente, fecha_hora_pedido, fecha_entrega, metodo_pago, monto, comprobante, estado) 
+            VALUES ('$cliente','$fechaHoraVenta','$echaEntrega','$metodoPago','$monto','$comprobante','$estado')";
 
 
 
+$ejecutar = mysqli_query($conexion, $consulta);
 
-$consulta="INSERT INTO pedidos (id_cliente, fecha_hora_pedido,fecha_entrega,metodo_pago,monto,comprobante,estado)
-VALUES ('$fecha_pedido','$fecha_entrega','$monto', $comprobante', $estado)";
-
-$ejecutar= mysqli_query($conexion, $consulta);
-
-if ($ejecutar) {
-    echo "Registro Exitoso";
-}else {
-    echo "Registro Fallido";
+if($ejecutar){
+    echo "Registro exitoso";
+}else{
+    echo "error";
 }
-
-
-//mostrar la informacion
-
-//echo $dni."<br>";
-//echo $ape_nom."<br>";
-//echo $correo."<br>";
-//echo $telefono."<br>";
-//echo $direccion."<br>";
-//echo $fecha_naci."<br>";
-
-
 
 ?>
