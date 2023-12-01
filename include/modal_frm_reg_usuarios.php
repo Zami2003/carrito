@@ -46,7 +46,7 @@
                                         <select name="rol" id="">
                                         <option></option>
                                             <?php
-                                            $b_roles = "SELECT * FROM rol";
+                                            $b_roles = "SELECT * FROM roles";
                                             $r_b_roles = mysqli_query($conexion, $b_roles);
                                             while ($datos_roles = mysqli_fetch_array($r_b_roles)) {?>
                                                 <option value="<?php echo $datos_roles['id'];?>"><?php echo $datos_roles['nombre'];?></option>
